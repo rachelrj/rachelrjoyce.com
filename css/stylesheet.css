@@ -1,0 +1,467 @@
+/*Rachel Joyce's Personal Website Cascading Style Sheet*/
+
+
+/*General Styling Area*/
+html{
+	background-color: #EEEEEE;
+	/* Light Gray */
+}
+body{
+	width: 100%;
+}
+header {
+	background-color: #000000;
+	height: 6em;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 15;	
+}
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 3.5em;
+}
+.SectionHeader{
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 20px;
+}
+h2, h3, h4, ol, ul, li {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+h2 {
+	font-size: 2em;
+}
+h3 {
+	font-size: 1.2em;
+}
+h4 {
+	font-size: 1em;
+}
+p {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 1em;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+footer{
+	background-color: #000000;
+	color: white;
+	padding-top: 35px;
+	padding-bottom: 35px;
+}
+footer:after { 
+	content: " "; display: block; clear: both;
+}
+
+/*Navigation Styling Area */
+nav {
+	text-align: center;
+	font-size: 3em;
+	width:100%;
+	height:100%;
+	/*box-shadow: 0px 1px 10px 1px #000000;*/
+		-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+nav a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .5em;
+	text-decoration: none;
+	display: inline-block;
+	width: 20%;
+	height: 100%;
+    text-align: center;
+    vertical-align: middle;
+	border-radius: 1em;
+}
+nav a p{
+	height: 50%;
+	vertical-align: middle;
+}
+nav a:link {color:#FFFFFF;}      /* unvisited link */
+nav a:visited {color:#FFFFFF;}  /* visited link */
+nav a:hover {color:#FFFFFF;}  /* mouse over link */
+nav a:active {color:#FFFFFF;}  /* selected link */
+
+
+/* Left align logo in navigation */
+#logo
+{
+	background-image: url('../img/logos/header/navLogoDesktop.jpg');
+	border-radius: 0em;
+	float: left;
+	width: 270px;
+}
+@media screen and (max-width: 750px) {
+	#logo
+	{
+		background-image: url('../img/logos/header/navLogoMobile.jpg');
+		width: 100px;
+	}
+}
+
+.navclass
+{
+	background-color: #888888;
+	height: 50%;
+	border-radius: 1em;
+}
+#threebar
+{
+	background-color: #000000;
+	height: 65px;
+	width: 50px;
+	padding: 14px;
+	position: absolute;
+    right: 5px;
+    top: 0px;
+    bottom: 5px;
+    display: none;
+}
+.bar
+{
+	background-color: #FFFFFF;
+	height: 15%;
+	width: 100%;
+	margin-top: 14%;
+	margin-bottom: 14%;
+	display: none;
+}
+@media screen and (max-width: 750px) {
+	.bar
+	{
+		display: block;
+	}
+	#threebar
+	{
+		display: inline;
+	}
+	nav a p {
+		display: none;
+	}
+	nav a {
+		display: none;
+	}
+	.navclass
+	{
+		display: none;
+	}
+	#logo
+	{
+		display: inline;
+	}
+}
+.mobilenav
+{
+	background-color: #000000;
+	position: absolute;
+	top: 96;
+	right: 0;
+	display: none;
+	z-index: 10;
+}
+.mobilenav a
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	text-decoration: none;
+	display: block;
+	width: 150px;
+	height: 30px;
+    text-align: center;
+    z-index: 11;
+}
+.mobilenav a:link {color:#FFFFFF;}      /* unvisited link */
+.mobilenav a:visited {color:#FFFFFF;}  /* visited link */
+.mobilenav a:hover {color:#FFFFFF;}  /* mouse over link */
+.mobilenav a:active {color:#FFFFFF;}  /* selected link */
+/*End Navigation Styling Area*/
+
+
+/* Hero Styling Area */
+#hero
+{
+	background-color: #ffffff;
+	/* Clear the sticky navigation */
+	margin-top: 100px;
+}
+
+/*Fixes height of parent div problem*/
+#hero:after { 
+	content: " "; display: block; clear: both;
+}
+
+#hero img {
+	margin: 20px;
+}
+
+.floatleft {
+	float: left;
+	width: 40%;
+	margin-right: 2%;
+	margin-left: 3%;
+	text-align: center;
+}
+
+.floatright {
+	float: right;
+	margin-left: 2%;
+	margin-right: 3%;
+	width: 40%;
+	text-align: center;
+}
+
+#welcometomysitetext {
+	color: black;
+}
+
+/* Float welcome text on top of hero image at smaller screensizes*/
+@media screen and (max-width: 620px) {
+	.floatleft{
+		width: 100%;
+		position: relative;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		margin-right: 2%;
+	}
+	.floatright{
+		width: 45%;
+		margin-left: 27.5%;
+		margin-right: 27.5%;
+		position: absolute;
+		z-index: 2;
+	}
+	#welcometomysitetext{
+		color:	white;
+		font-size: 2.5em;
+	}
+}
+@media screen and (max-width: 547px) {
+	.floatright{
+		width: 55%;
+		margin-left: 22.5%;
+		margin-right: 22.5%;
+	}
+
+}
+@media screen and (max-width: 436px) {
+	.floatright{
+		width: 70%;
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+	#hero img{
+		max-width: 280px;
+		margin:	5px; 
+	}
+	.floatleft {
+		margin-right: .5%;
+		margin-left: .5%;
+	}
+}
+/*End Hero Styling Area */
+
+/*About Styling */
+#about {
+	padding-bottom: 50px;
+}
+/*End About Styling*/
+
+/* Resume Styling Area */
+
+#resume {
+	background-color: #1F1F1F;
+	font: white;
+	padding-bottom: 50px;
+}
+#resume * {
+	color: white;
+}
+#resume a {
+	color: steelblue;
+	text-decoration: none;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 1em;
+}
+#resume a:link {color:steelblue;}      /* unvisited link */
+#resume a:visited {color:steelblue;}  /* visited link */
+#resume a:hover {color:steelblue;}  /* mouse over link */
+#resume a:active {color:steelblue;}  /* selected link */
+
+#resume h2 {
+	margin-bottom: 15px;
+}
+#resume p {
+	font-size: 1em;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#resume hr{
+	height: 1px;
+	border-width: 1px;
+}
+
+/*Fixes height of parent div problem*/
+#resume:after { 
+	content: " "; display: block; clear: both;
+}
+
+/*Employment History Styling Area */
+
+#employment {
+	width: 35%;
+	margin-left: 15%;
+	margin-right: 5%;
+	float:	left;
+}
+@media screen and (max-width: 900px){
+	#employment{
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
+.thinfont {
+	font-weight: 200;
+}
+.job {
+	margin-bottom: 20px;
+}
+.job:after{
+	content: " "; display: block; clear: both;
+}
+
+.image {
+	float: left;
+	display: inline;
+	text-align: left;
+	width: 30%;
+	margin-left: 3%;
+	padding-top: 7px;
+}
+.text {
+	float: right;
+	display: inline;
+	width: 65%;
+	margin-left: 2%;
+}
+#downloadbutton {
+	margin-top: 35px;
+	margin-bottom: 50px;
+}
+#downloadbutton a:link {color:white; background-color: steelblue; font-size: 1.2em; padding: 5px;}      /* unvisited link */
+#downloadbutton a:visited {color:white; background-color: steelblue; font-size: 1.2em; padding: 5px;}  /* visited link */
+#downloadbutton a:hover {color:steelblue; background-color: white; font-size: 1.2em; padding: 5px;}  /* mouse over link */
+#downloadbutton a:active {color:steelblue; background-color: white; font-size: 1.2em; padding: 5px;}  /* selected link */
+/*End Employment History Styling */
+/*Eduation and Skills Styling Area*/
+#ed-skills {
+	width: 30%;
+	margin-right: 10%;
+	margin-left: 5%;
+	float:	left;
+}
+@media screen and (max-width: 900px){
+	#ed-skills{
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
+#education{
+	margin-bottom: 30px;
+}
+#ed-skills img{
+	max-width: 100%;
+}
+/*End Skills Styling Area*/
+/*End Resume Styling*/
+
+/* Contact Styling */
+#contact {
+	padding-bottom: 50px;
+}
+
+
+input[type="text"] {
+    width: 200px;
+    height: 25px;
+    display: block;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+input[name="message"] {
+	height: 150px;
+	width: 400px;
+}
+@media screen and (max-width: 600px){
+	input[name="message"]{
+		width: 200px;
+	}
+}
+
+
+/*Very similar to downloadbutton*/
+input[type="submit"] {
+	width: 150px;
+	color: white;
+	background-color: steelblue;
+	font-size: 1.2em;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	margin-right: 15%;
+	margin-left: 15%;
+	margin-top: 35px;
+	border:0 none;
+	padding: 5px;
+}
+
+/*End Contact Styling*/
+footer .floatright {
+	text-align: left;
+	width: 35%;
+	margin-right: 10%;
+	margin-left: 5%;
+}
+footer .floatleft {
+	text-align: left;
+	width: 35%;
+	margin-right: 5%;
+	margin-left:10%;
+}
+footer p {
+	margin: 0;
+}
+@media screen and (max-width: 600px) {
+	footer .floatright{
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+		float:	none;
+		display: block;
+
+	}
+
+	footer .floatleft {
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+		float: none;
+		display: block;
+	}
+
+	footer {
+		height: 220px;
+	}
+}
+footer .floatleft img{
+	margin-left: 10px;
+	margin-top: 5px;
+}

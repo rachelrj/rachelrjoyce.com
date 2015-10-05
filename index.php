@@ -4,6 +4,7 @@
 
 <HEAD>
 <TITLE>HOME | Rachel R Joyce</TITLE>
+<link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
 
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
 <meta name="Author" content="Rachel R Joyce">

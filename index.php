@@ -57,23 +57,16 @@
 			Thank you for visiting my personal site and for taking a few minutes to get to know me. 
 		</p>
 		<p>
-			I recently graduated from the University of Michigan, Ann Arbor where I studied 
-			<a href="http://en.wikipedia.org/wiki/Informatics_(academic_field)" target="_blank">informatics</a> 
-			and computer science. My studies provided a solid grounding in computer programming, mathematics,
-			and statistics. I felt engaged and passionate in classes such as Complex Web Design, Information Retrieval, and Database Management Systems
-			and soon realized my interest in web development and digital software.  
-		</p>
-		<p>
-			I accepted digital analyst position at ChannelNet, an agile software development company delivering marketing solutions on the web. 
-			I appreciated the opportunity to work in a Scrum shop and came to revere the core concepts of agility.
-			A year later, I became a project manager at ChannelNet, responsible for leading teams and managing projects to completion. I
-			learned to be a servant-leader to the team and also plan, manage, and analyze details. You can see my Scrum Alliance profile 
+			I am a young software developer in Boulder, Colorado. 
+			I recently moved here from Ann Arbor, Michigan and am currently reveling in the spectacular views and amazing weather!
+			My interests as a web developer lie in both front end and full stack; my expertise is in newer front end technologies.
+			I am passionate about solving problems and discussing and improving code design and readability.
+			I am also an advocate of agile methodologies; you can see my Scrum Alliance profile 
 			<a href="http://members.scrumalliance.org/profiles/361551-rachel-joyce" target="_blank">here</a>.
 		</p>
 		<p>
-			I am always looking to learn more about web development, agile methodologies, digital analytics, usability, web design and project management.
-			I look forward to discussing common interests or opportunities. Fill out the form below to send me an email
-			so that we can connect. Thanks again for visiting!
+			I am always looking to discuss common interests or opportunities. Fill out the form below to send me an email
+			so that we can connect. Thanks again for visiting.
 		</p>
 
 	</div>

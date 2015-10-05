@@ -4,6 +4,7 @@ var carouselWidth;
 var carouselHeight;
 var left_indent;
 var numSlides;
+$.mobile.loading().hide();
 
 function rotate() {
     moveFirstImagetoEnd();

@@ -639,7 +639,7 @@ footer .floatleft img{
 		background-image: url("../img/carousel/slide4-small.jpg");
 	}	
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 374px) {
 
 	#slides, #slides ul, #slides li {
 	    width: 320px;

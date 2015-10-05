@@ -18,6 +18,16 @@ function restartInterval() {
     carouselInverval = setInterval(rotate, speed);
 }
 
+function rotateForward(event) {
+    event.stopPropagation();
+    moveFirstImagetoEnd();
+}
+
+function rotateBackward(event) {
+    event.stopPropagation();
+    moveLastImagetoFirst();
+}
+
 $(document).ready(function() {
     startCarousel();
     carouselWidth = $('#slides ul').width();
@@ -25,15 +35,19 @@ $(document).ready(function() {
     left_indent = carouselWidth * (-1);
     numSlides = $('#carouselList').children().length;
     $('#arrow-right').click(function(event){
-        event.stopPropagation();
-        moveFirstImagetoEnd();
+        rotateForward(event);
     });
     $('#arrow-left').click(function(event){
-        event.stopPropagation();
-        moveLastImagetoFirst();
-    }); 
+        rotateBackward(event);
+    });
 });
 
+$(document).on('swipeleft', '#carouselList', function(event){
+    rotateForward(event);              
+});
+$(document).on('swiperight', '#carouselList', function(event){
+    rotateBackward(event);             
+});
 
 function moveFirstImagetoEnd() {
     restartInterval();

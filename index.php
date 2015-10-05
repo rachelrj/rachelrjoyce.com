@@ -3,8 +3,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <HEAD>
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-
 <TITLE>HOME | Rachel R Joyce</TITLE>
 
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
@@ -15,15 +13,25 @@
 <meta name="rating" content="general">
 <meta name="viewport" content="initial-scale=1">
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include the jQuery library -->
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Include the jQuery Mobile library for swipe event manipulation -->
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<!-- Include MY JQuery Functions -->
 <script src="js/carousel.js"></script>
+
+<!-- Include MY Stylesheet -->
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+
 </HEAD>
 
 <BODY>	  
 	<?php
 		include 'header.php';
 	?>
-	<div id= "home">
+	<div data-role="page" id="home">
 		<div id= "hero">
 			<div id="carousel">
 				<div id="arrow-left-container">

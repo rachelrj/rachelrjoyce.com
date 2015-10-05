@@ -606,30 +606,24 @@ footer .floatleft img{
 }
 @media screen and (max-width: 615px) {
 
+	#carousel {
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+
+	#slides, #slides ul, #slides li {
+	    width:500px;
+	    height:281px
+	}
+	#arrow-left-container, #arrow-right-container, #arrow-left, #arrow-right, #arrow-right-container, #arrow-left-container {
+	    display: none;
+	}
+}
+@media screen and (max-width: 500px) {
+
 	#slides, #slides ul, #slides li {
 	    width:280px;
-	    height:280px;		
-	}
-	#arrow-left-container, #arrow-right-container {
-	    height:280px;
-	}
-	#arrow-left {
-		border-top: 13px solid transparent;
-		border-bottom: 13px solid transparent; 
-		border-right:15px solid black;
-	}
-	#arrow-right {
-		border-top: 13px solid transparent;
-		border-bottom: 13px solid transparent;
-		border-left: 13px solid black;
-	}
-	#arrow-right-container {
-		padding-right: 2px;
-		padding-left: 4px;
-	}
-	#arrow-left-container {
-		padding-left: 2px;
-		padding-right: 4px;
+	    height: 280px;
 	}
 
 	.slide1{

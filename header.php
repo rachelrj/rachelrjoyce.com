@@ -9,28 +9,28 @@ This php function assigns the class 'navclass' to the page/section the user is c
 This class indicates to the user which page/section she is currently on.
 -->
        		<nav>
-       		<a href = "javascript:scrollToTop();" id = 'logo'>
+       		<a href="" id = 'logo'>
 
        		</a>
-               	<a 
+               	<a class= "navigationLink"
 					href = "#about"><p
 					<?php
 					if ($_SERVER['PHP_SELF']=='#about')
-							echo " class=\"navclass\""
+							echo " id=\"#selectedNavigationID\""
 					?>
 					>About</p></a>
-               	<a 
+               	<a class= "navigationLink"
                		href = "#resume"><p
                		<?php
 					if ($_SERVER['PHP_SELF']=='#resume')
-							echo " class=\"navclass\""
+							echo " id=\"#selectedNavigationID\""
 					?>
 					>Resume</p></a>
-               	<a 
+               	<a class= "navigationLink"
               		href = "#contact"><p
               		<?php
 					if ($_SERVER['PHP_SELF']=='#contact')
-							echo " class=\"navclass\""
+							echo " id=\"#selectedNavigationID\""
 					?>
 					>Contact</p></a>
           	</nav>
@@ -54,49 +54,40 @@ This class indicates to the user which page/section she is currently on.
 -->
 
 					<div class= "mobilenav">
-					<a 
+					<a class= "navigationLink"
 					href = "#about"><p
 					<?php
 					if ($_SERVER['PHP_SELF']=='#about')
-							echo " class=\"selectedmobilenav\""
+							echo " id=\"#selectedNavigationID\""
 					?>
 					>About</p></a>
-               		<a 
+               		<a class= "navigationLink"
                		href = "#resume"><p
                		<?php
 					if ($_SERVER['PHP_SELF']=='#resume')
-							echo " class=\"selectedmobilenav\""
+							echo " id=\"#selectedNavigationID\""
 					?>
 					>Resume</p></a>
-               		<a 
+               		<a class= "navigationLink"
               		href = "#contact"><p
               		<?php
 					if ($_SERVER['PHP_SELF']=='#contact')
-							echo " class=\"selectedmobilenav\""
+							echo " id=\"#selectedNavigationID\""
 					?>
 					>Contact</p></a>
 					</div>
 
-<script language="javascript">
-function scrollToTop() {
-	$( "body" ).scrollTop( 0 );
-}
-function toggleText() {
-$('.mobilenav').slideToggle("slow", function(){
-       });    
-}
-</script>
-<script language="javascript">
-//script to remove mobile nav on browser resize
-$( window ).resize(function() {
-  $( ".mobilenav" ).hide();
-});
-</script>
-<script language="javascript">
-$(document).bind('click', function(e) {
-  if(!$(e.target).is('#threebar') && !$(e.target).is('.bar')) {
-    $( ".mobilenav" ).hide();
-  }
-});
-</script>
+	<script language="javascript">
+		function toggleText() {
+			$('.mobilenav').slideToggle("slow");   
+		};
+		$( window ).resize(function() {
+			$( ".mobilenav" ).hide();
+		});
+		$(document).bind('click', function(e) {
+			if(!$(e.target).is('#threebar') && !$(e.target).is('.bar')) {
+				$( ".mobilenav" ).hide();
+			}
+		});
+	</script>
 </header>

@@ -622,7 +622,7 @@ footer .floatleft img{
 @media screen and (max-width: 500px) {
 
 	#slides, #slides ul, #slides li {
-	    width:280px;
+	    width: 375px;
 	    height: 280px;
 	}
 
@@ -637,6 +637,26 @@ footer .floatleft img{
 	}
 	.slide4{
 		background-image: url("../img/carousel/slide4-small.jpg");
+	}	
+}
+@media screen and (max-width: 375px) {
+
+	#slides, #slides ul, #slides li {
+	    width: 320px;
+	    height: 280px;
+	}
+
+	.slide1{
+		background-image: url("../img/carousel/slide1-xtrasmall.jpg");
+	}
+	.slide2{
+		background-image: url("../img/carousel/slide2-xtrasmall.jpg");
+	}
+	.slide3{
+		background-image: url("../img/carousel/slide3-xtrasmall.jpg");
+	}
+	.slide4{
+		background-image: url("../img/carousel/slide4-xtrasmall.jpg");
 	}	
 }
 .anchor{

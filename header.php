@@ -9,7 +9,7 @@ This php function assigns the class 'navclass' to the page/section the user is c
 This class indicates to the user which page/section she is currently on.
 -->
        		<nav>
-       		<a id = 'logo'>
+       		<a href = "javascript:scrollToTop();" id = 'logo'>
 
        		</a>
                	<a 
@@ -78,7 +78,9 @@ This class indicates to the user which page/section she is currently on.
 					</div>
 
 <script language="javascript">
- //script for mobile navigation  
+function scrollToTop() {
+	$( "body" ).scrollTop( 0 );
+}
 function toggleText() {
 $('.mobilenav').slideToggle("slow", function(){
        });    

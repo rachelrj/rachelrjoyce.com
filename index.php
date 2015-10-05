@@ -16,8 +16,8 @@
 <!-- Include the jQuery library -->
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-<!-- Include the jQuery Mobile library for swipe event manipulation -->
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<!-- Include Touchy JS minified file for swipe event manipulation -->
+<script src="js/touchy.js"></script>
 
 <!-- Include MY JQuery Functions -->
 <script src="js/carousel.js"></script>

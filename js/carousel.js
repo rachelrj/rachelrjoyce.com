@@ -4,7 +4,6 @@ var carouselWidth;
 var carouselHeight;
 var left_indent;
 var numSlides;
-$.mobile.loading().hide();
 
 function rotate() {
     moveFirstImagetoEnd();
@@ -41,14 +40,14 @@ $(document).ready(function() {
     $('#arrow-left').click(function(event){
         rotateBackward(event);
     });
+    document.addEventListener('swipeleft', rotateForward);
+    document.addEventListener('swiperight', rotateBackward);
 });
 
-$(document).on('swipeleft', '#carouselList', function(event){
-    rotateForward(event);              
-});
-$(document).on('swiperight', '#carouselList', function(event){
-    rotateBackward(event);             
-});
+var handleCarouselSwipe = function (e, $target, data) {
+    console.log(data);
+};
+$('#carouselList').bind('touchy-swipe', handleCarouselSwipe);
 
 function moveFirstImagetoEnd() {
     restartInterval();

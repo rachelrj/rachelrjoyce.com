@@ -31,7 +31,7 @@
 	<?php
 		include 'header.php';
 	?>
-	<div data-role="page" id="home">
+	<div id="home">
 		<div id= "hero">
 			<div id="carousel">
 				<div id="arrow-left-container">

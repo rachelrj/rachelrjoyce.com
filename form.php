@@ -15,10 +15,4 @@ $headers = "From: mywebsite@rachelrjoyce.com";
 mail($to,$subj,$body,$headers);
 
 header('Location:index.php#contact');
-
-//function test_input($data) {
-//  $data = trim($data);
-//  $data = stripslashes($data);
-//  $data = htmlspecialchars($data);
-//  return $data; }
 ?>

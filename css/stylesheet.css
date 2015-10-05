@@ -8,6 +8,7 @@ html{
 }
 body{
 	width: 100%;
+	margin: 0;
 }
 header {
 	background-color: #000000;
@@ -28,6 +29,22 @@ h1 {
 	margin-bottom: 0;
 	padding-top: 20px;
 }
+.SectionHeaderLeft, .SectionHeaderRight{
+	color: #fff;
+	margin-left:-10%;
+	width: 90%;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 20px;
+	display: inline-block;
+	float: left;
+}
+@media screen and (max-width: 900px) {
+	.SectionHeaderLeft, .SectionHeaderRight{
+		margin-left:0;
+	}	
+}
+
 h2, h3, h4, ol, ul, li {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	margin-top: 0;
@@ -45,10 +62,12 @@ h4 {
 p {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 1em;
-	margin-left: 15%;
-	margin-right: 15%;
+	margin-left: 12.5%;
+	margin-right: 12.5%;
 }
 footer{
+	display: block;
+	width: 100%;
 	background-color: #000000;
 	color: white;
 	padding-top: 35px;
@@ -197,10 +216,6 @@ nav a:active {color:#FFFFFF;}  /* selected link */
 	content: " "; display: block; clear: both;
 }
 
-#hero img {
-	margin: 20px;
-}
-
 .floatleft {
 	float: left;
 	width: 40%;
@@ -269,61 +284,62 @@ nav a:active {color:#FFFFFF;}  /* selected link */
 /*End Hero Styling Area */
 
 /*About Styling */
-#about {
+#aboutStyle {
 	padding-bottom: 50px;
 }
 /*End About Styling*/
 
 /* Resume Styling Area */
 
-#resume {
+#resumeStyle {
 	background-color: #1F1F1F;
 	font: white;
 	padding-bottom: 50px;
 }
-#resume * {
+#resumeStyle * {
 	color: white;
 }
-#resume a {
+#resumeStyle a {
 	color: steelblue;
 	text-decoration: none;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 1em;
 }
-#resume a:link {color:steelblue;}      /* unvisited link */
-#resume a:visited {color:steelblue;}  /* visited link */
-#resume a:hover {color:steelblue;}  /* mouse over link */
-#resume a:active {color:steelblue;}  /* selected link */
+#resumeStyle a:link {color:steelblue;}      /* unvisited link */
+#resumeStyle a:visited {color:steelblue;}  /* visited link */
+#resumeStyle a:hover {color:steelblue;}  /* mouse over link */
+#resumeStyle a:active {color:steelblue;}  /* selected link */
 
-#resume h2 {
+#resumeStyle h2 {
 	margin-bottom: 15px;
 }
-#resume p {
+#resumeStyle p {
 	font-size: 1em;
 	margin-left: 0;
 	margin-right: 0;
 }
 
-#resume hr{
+#resumeStyle hr{
 	height: 1px;
 	border-width: 1px;
 }
 
 /*Fixes height of parent div problem*/
-#resume:after { 
+#resumeStyle:after { 
 	content: " "; display: block; clear: both;
 }
 
 /*Employment History Styling Area */
 
-#employment {
+
+#employment, #form {
 	width: 35%;
 	margin-left: 15%;
 	margin-right: 5%;
 	float:	left;
 }
 @media screen and (max-width: 900px){
-	#employment{
+	#employment, #form{
 		width: 80%;
 		margin-left: 10%;
 		margin-right: 10%;
@@ -353,24 +369,24 @@ nav a:active {color:#FFFFFF;}  /* selected link */
 	width: 65%;
 	margin-left: 2%;
 }
-#downloadbutton {
+#downloadbutton, #ctabutton {
 	margin-top: 35px;
 	margin-bottom: 50px;
 }
-#downloadbutton a:link {color:white; background-color: steelblue; font-size: 1.2em; padding: 5px;}      /* unvisited link */
-#downloadbutton a:visited {color:white; background-color: steelblue; font-size: 1.2em; padding: 5px;}  /* visited link */
-#downloadbutton a:hover {color:steelblue; background-color: white; font-size: 1.2em; padding: 5px;}  /* mouse over link */
-#downloadbutton a:active {color:steelblue; background-color: white; font-size: 1.2em; padding: 5px;}  /* selected link */
+#downloadbutton a:link, #ctabutton a:link {text-decoration: none; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; color:white; background-color: steelblue; font-size: 1.2em; padding: 5px;}      /* unvisited link */
+#downloadbutton a:visited, #ctabutton a:visited {text-decoration: none; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; color:white; background-color: steelblue; font-size: 1.2em; padding: 5px;}  /* visited link */
+#downloadbutton a:hover, #ctabutton a:hover {text-decoration: none; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; color:steelblue; background-color: white; font-size: 1.2em; padding: 5px;}  /* mouse over link */
+#downloadbutton a:active, #ctabutton a:active {text-decoration: none; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; color:steelblue; background-color: white; font-size: 1.2em; padding: 5px;}  /* selected link */
 /*End Employment History Styling */
 /*Eduation and Skills Styling Area*/
-#ed-skills {
+#ed-skills, #skills {
 	width: 30%;
 	margin-right: 10%;
 	margin-left: 5%;
 	float:	left;
 }
 @media screen and (max-width: 900px){
-	#ed-skills{
+	#ed-skills, #skills{
 		width: 80%;
 		margin-left: 10%;
 		margin-right: 10%;
@@ -379,28 +395,46 @@ nav a:active {color:#FFFFFF;}  /* selected link */
 #education{
 	margin-bottom: 30px;
 }
-#ed-skills img{
+#ed-skills img, #skills img, #skills a{
 	max-width: 100%;
+}
+#skills img {
+	border: solid black 1px;
+	margin-top: 5px;
+}
+.skillSection {
+	width:100%;
 }
 /*End Skills Styling Area*/
 /*End Resume Styling*/
 
 /* Contact Styling */
-#contact {
+#contactStyle {
+	display: block;
+	width: 100%;
 	padding-bottom: 50px;
+	background-color: #333333;
+}
+#contactStyle:after { 
+	content: " "; display: block; clear: both;
 }
 
+form p {
+	margin-left: 0;
+	color: steelblue;
+	font-weight: bold;
+}
 
 input[type="text"] {
     width: 200px;
     height: 25px;
     display: block;
-    margin-left: 15%;
+    margin-left: 0;
     margin-right: 15%;
 }
 input[name="message"] {
 	height: 150px;
-	width: 400px;
+	width: 350px;
 }
 @media screen and (max-width: 600px){
 	input[name="message"]{
@@ -417,7 +451,7 @@ input[type="submit"] {
 	font-size: 1.2em;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	margin-right: 15%;
-	margin-left: 15%;
+	margin-left: 0;
 	margin-top: 35px;
 	border:0 none;
 	padding: 5px;
@@ -464,4 +498,156 @@ footer p {
 footer .floatleft img{
 	margin-left: 10px;
 	margin-top: 5px;
+}
+
+
+/*Carousel*/
+#carousel {
+	width: 100%;
+	border:1px solid #ccc;
+}
+#slides {
+    width:800px;
+    height:450px;
+    overflow:hidden;
+    margin: auto;
+    text-align: center;
+}   
+#slides ul {
+	position: relative;
+    list-style:none;
+    height: 450px;  
+    width:800px;
+    margin: auto;
+    text-align: center;
+    padding: 0;          
+}
+#slides li {
+	position: relative;
+    width:800px;
+    height:450px;
+    margin: auto;
+    text-align: center;   
+}
+.slide1{
+	background-image: url("../img/carousel/slide1-large.jpg");
+}
+.slide2{
+	background-image: url("../img/carousel/slide2-large.jpg");
+}
+.slide3{
+	background-image: url("../img/carousel/slide3-large.jpg");
+}
+.slide4{
+	background-image: url("../img/carousel/slide4-large.jpg");
+}
+/* Styling for prev and next buttons */
+#arrow-left-container, #arrow-right-container {
+	height: 450px;
+	display: inline-block;
+}
+#arrow-right-container {
+	float: right;
+	padding-right: 10px;
+}
+#arrow-left-container {
+	float: left;
+	padding-left: 10px;
+}
+#arrow-left, #arrow-right {
+	margin: auto;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+#arrow-left {
+	border-top: 60px solid transparent;
+	border-bottom: 60px solid transparent; 
+	border-right:60px solid black;
+}
+#arrow-right {
+	border-top: 60px solid transparent;
+	border-bottom: 60px solid transparent;
+	border-left: 60px solid black;
+}
+@media screen and (max-width: 950px) {
+
+	#slides, #slides ul, #slides li {
+	    width:500px;
+	    height:281px;		
+	}
+	#arrow-left-container, #arrow-right-container {
+	    height:281px;
+	}
+	#arrow-left {
+		border-top: 40px solid transparent;
+		border-bottom: 40px solid transparent; 
+		border-right:40px solid black;
+	}
+	#arrow-right {
+		border-top: 40px solid transparent;
+		border-bottom: 40px solid transparent;
+		border-left: 40px solid black;
+	}
+
+	.slide1{
+		background-image: url("../img/carousel/slide1-medium.jpg");
+	}
+	.slide2{
+		background-image: url("../img/carousel/slide2-medium.jpg");
+	}
+	.slide3{
+		background-image: url("../img/carousel/slide3-medium.jpg");
+	}
+	.slide4{
+		background-image: url("../img/carousel/slide4-medium.jpg");
+	}	
+
+}
+@media screen and (max-width: 615px) {
+
+	#slides, #slides ul, #slides li {
+	    width:280px;
+	    height:280px;		
+	}
+	#arrow-left-container, #arrow-right-container {
+	    height:280px;
+	}
+	#arrow-left {
+		border-top: 13px solid transparent;
+		border-bottom: 13px solid transparent; 
+		border-right:15px solid black;
+	}
+	#arrow-right {
+		border-top: 13px solid transparent;
+		border-bottom: 13px solid transparent;
+		border-left: 13px solid black;
+	}
+	#arrow-right-container {
+		padding-right: 2px;
+		padding-left: 4px;
+	}
+	#arrow-left-container {
+		padding-left: 2px;
+		padding-right: 4px;
+	}
+
+	.slide1{
+		background-image: url("../img/carousel/slide1-small.jpg");
+	}
+	.slide2{
+		background-image: url("../img/carousel/slide2-small.jpg");
+	}
+	.slide3{
+		background-image: url("../img/carousel/slide3-small.jpg");
+	}
+	.slide4{
+		background-image: url("../img/carousel/slide4-small.jpg");
+	}	
+}
+.anchor{
+  display: block;
+  height: 96px; /*same height as header*/
+  margin-top: -96px; /*same height as header*/
+  visibility: hidden;
 }

@@ -16,6 +16,7 @@
 <meta name="viewport" content="initial-scale=1">
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/carousel.js"></script>
 </HEAD>
 
 <BODY>	  
@@ -24,16 +25,25 @@
 	?>
 	<div id= "home">
 		<div id= "hero">
-			<div class= "floatleft">
-				<img src = "img/rachelrjoyceimage-graywithWHITEfeathermask.png">
-			</div>
-			<div class= "floatright">
-				<h1 id= "welcometomysitetext"> Welcome to my personal website! </h1>
-			</div
+			<div id="carousel">
+				<div id="arrow-left-container">
+			        <div id="arrow-left"></div>
+			    </div>
+			    <div id="arrow-right-container">
+			        <div id="arrow-right"></div>
+			    </div>
+			    <div id="slides"> 
+			        <ul id="carouselList">
+			            <li class="slide1"></li>
+			            <li class="slide2"></li>
+			            <li class="slide3"></li>
+			            <li class="slide4"></li>
+			        </ul>
+			    </div>
 		</div>
 	</div>
-
-	<div id= "about">
+	<div id="about" class="anchor"></div>
+	<div id= "aboutStyle">
 		<h1 class="SectionHeader">About</h1>
 		<p>
 			Thank you for visiting my personal site and for taking a few minutes to get to know me. 
@@ -59,18 +69,32 @@
 		</p>
 
 	</div>
-
-	<div id= "resume">
+	<div id="resume" class="anchor"></div>
+	<div id= "resumeStyle">
 	<h1 class="SectionHeader"> Resume </h1>
 		<div id= "employment">
 			<h2> Employment History </h2>
+				<div class="job">
+					<div class="image">
+						<img src = "img/logos/job/yesenergy.png">
+					</div>
+					<div class = "text">
+    					<h3 class="thinfont"> Web Developer, Yes Energy </h3>
+						<h4 class="thinfont"> May, 2015 - Present </h4>
+						<a href="http://www.yesenergy.com/" target="_blank">Yes Energy Website</a>
+					</div>
+				</div>
+				<div id="downloadbutton">
+					<a href="pdf/YesEnergy-samplework.pdf" download="RachelsSampleWork">View My Sample Work</a>
+				</div>
+				<hr>
 				<div class="job">
 					<div class="image">
 						<img src = "img/logos/job/channelnet-logo.png">
 					</div>
 					<div class = "text">
     					<h3 class="thinfont"> Project Manager, ChannelNet </h3>
-						<h4 class="thinfont"> May, 2014 - Present </h4>
+						<h4 class="thinfont"> May, 2014 - May, 2015 </h4>
 						<a href="http://www.channelnet.com/" target="_blank">ChannelNet Website</a>
 					</div>
 				</div>
@@ -113,26 +137,44 @@
 		<div id ="ed-skills">
 			<div id="education">
 				<h2>Education</h2>
+					<img src="img/cu.png">
+					<h3 class="thinfont">University of Colorado, Boulder</h3>
+					<h4 class="thinfont">Master of Business Administration</h4>
+					<h4 class="thinfont">Expected Graduation: 2017</h4>
+					<hr>
 					<img src="img/universityofmichigan.png">
 					<h3 class="thinfont">University of Michigan, Ann Arbor</h3>
 					<h4 class="thinfont">Bachelor of Arts in Informatics</h4>
 					<h4 class="thinfont">Minor: Computer Science</h4>
 			</div>
-			<div id="skills">
-				<h2>Skills</h2>
-					<img src="img/WebDevelopment-transparent.png">
-			</div>
 		</div>
 	</div>
-	<div id= "contact">
-		<h1 class="SectionHeader"> Contact </h1>
-		<form method="post" action="form.php">
-			<p>Name:</p><input type="text" name="name">
-			<p>E-mail:</p> <input type="text" name="email">
-			<p>Website:</p> <input type="text" name="website">
-			<p>Message:</p> <input type="text" name="message">
-			<input type="submit" value="Send">
-		</form>
+	<div id="contact" class="anchor"></div>
+	<div id= "contactStyle">
+		<div id="form">
+			<h1 class="SectionHeaderLeft"> Contact </h1>
+			<div id="formDiv">
+				<form method="post" action="form.php">
+					<p>Name:</p><input type="text" name="name">
+					<p>E-mail:</p> <input type="text" name="email">
+					<p>Website:</p> <input type="text" name="website">
+					<p>Message:</p> <input type="text" name="message">
+					<input type="submit" value="Send">
+				</form>
+			</div>
+		</div>
+		<div id="skills">
+			<h1 class="SectionHeaderRight"> Skills </h1>
+			<div class="skillSection">
+			<img src="img/WebDevelopment-transparent.png">
+			</div>
+			<div class="skillSection">
+			<a href="Forecast-Lookup"><img src="img/ReactJS.jpg"></a>
+			<div id="ctabutton">
+				<a href="Forecast-Lookup" target="_blank">View my React mini-project</a>
+			</div>
+			</div>
+		</div>
 	</div>
 <footer>
 	<div class="floatleft">

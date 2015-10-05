@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+ 		<title>Forecast Lookup | Rachel R Joyce</title>
+
+		<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+		<meta name="Author" content="Rachel R Joyce">
+		<meta http-equiv="Content-Language" content="en-us">
+		<meta NAME="GOOGLEBOT" CONTENT="INDEX, FOLLOW">
+		<meta name="robots" content="all, index, follow">
+		<meta name="rating" content="general">
+		<meta name="viewport" content="initial-scale=1">
+
+		<!--include Jquery-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<!--include Jquery AutoComplete-->
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<!--include react-->
+		<script src="http://fb.me/react-0.13.1.js"></script>
+		<script src="http://fb.me/JSXTransformer-0.13.1.js"></script>
+		<!--Include My Stylesheet-->
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+		<!--Include My JSX-->
+		<script src="js/script.jsx" script type="text/jsx"></script>
+		<!--Include My Scripts-->
+		<script src="js/script.js"></script>
+	</head>
+
+	<body>
+
+		<header>
+			<div id="rachel">
+				<p class="credit">
+					Created by:
+				</p>
+				<img src="img/rachel.png">
+			</div>
+			</div>
+			<div id="wunderground">
+				<p class="credit">
+					Powered by:
+				</p>
+				<img src="img/wunderground.png"/>
+			</div>
+		</header>
+
+		<h1>
+			Forecast Lookup
+		</h1>
+
+	    <div class="ui-widget">
+			<input id="location-entry" name="location-entry" placeholder="Enter a city" type="text" onkeyup="if (event.keyCode == 13) document.getElementById('button').click()" oninput="autoCompleteFunction()"/>
+			<input type="button" id="button" onclick="submitLocation(); " value="Submit"/>
+		</div>
+		
+    	<div id="response">
+		</div>
+
+	</body>
+
+</html>

@@ -5,26 +5,26 @@ var carouselHeight;
 var left_indent;
 var numSlides;
 
-function rotate() {
-    moveFirstImagetoEnd();
-};
-
 function startCarousel() {
-    carouselInverval = setInterval(rotate, speed);
+    carouselInverval = setInterval(rotateForward, speed);
 }
 
 function restartInterval() {
     clearInterval(carouselInverval);
-    carouselInverval = setInterval(rotate, speed);
+    carouselInverval = setInterval(rotateForward, speed);
 }
 
 function rotateForward(event) {
-    event.stopPropagation();
+    if(typeof(event) !== "undefined"){
+        event.stopPropagation();
+    }
     moveFirstImagetoEnd();
 }
 
 function rotateBackward(event) {
-    event.stopPropagation();
+    if(typeof(event) !== "undefined") {
+        event.stopPropagation();
+    }
     moveLastImagetoFirst();
 }
 
@@ -42,6 +42,7 @@ $(document).ready(function() {
     });
     document.addEventListener('swipeleft', rotateForward);
     document.addEventListener('swiperight', rotateBackward);
+    addHoverEvent();
 });
 
 var handleCarouselSwipe = function (e, $target, data) {
@@ -84,13 +85,15 @@ function moveLastImagetoFirst() {
             lastListItem.animate({'left' : 0}, { duration: 500, queue: false });
         });
 };                    
-    
-$('#slides').hover(
-    
-    function() {
-        clearInterval(carouselInverval);
-    }, 
-    function() {
-        carouselInverval = setInterval(rotate, speed);    
-    }
-); 
+
+function addHoverEvent() {
+    $('#carouselList').hover(
+        
+        function() {
+            clearInterval(carouselInverval);
+        }, 
+        function() {
+            carouselInverval = setInterval(rotateForward, speed);    
+        }
+    ); 
+}

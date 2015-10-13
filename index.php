@@ -24,7 +24,7 @@
 <script src="js/carousel.js"></script>
 
 <!-- Include MY Scroll Function -->
-<script src="js/scrollFunctions.js"></script>
+<script src="js/navigationFunctions.js"></script>
 
 <!-- Include MY Stylesheet -->
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">

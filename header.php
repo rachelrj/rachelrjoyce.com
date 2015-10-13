@@ -6,7 +6,6 @@
 
 <!--
 This php function assigns the class 'navclass' to the page/section the user is currently on.
-This class indicates to the user which page/section she is currently on.
 -->
        		<nav>
        		<a href="" id = 'logo'>
@@ -36,10 +35,10 @@ This class indicates to the user which page/section she is currently on.
           	</nav>
 
 <!--
-					Three Bar below
+					Three Bar (hamburger icon) for mobile devices
 -->
 
-					<a id="threebar" href = "javascript:toggleText();">
+					<a id="threebar">
 					<div class= "bar">
 					</div>
 					<div class= "bar">
@@ -50,7 +49,7 @@ This class indicates to the user which page/section she is currently on.
 
 
 <!--
-					Mobile Nav
+					Mobile Navigation
 -->
 
 					<div class= "mobilenav">
@@ -76,18 +75,4 @@ This class indicates to the user which page/section she is currently on.
 					?>
 					>Contact</p></a>
 					</div>
-
-	<script language="javascript">
-		function toggleText() {
-			$('.mobilenav').slideToggle("slow");   
-		};
-		$( window ).resize(function() {
-			$( ".mobilenav" ).hide();
-		});
-		$(document).bind('click', function(e) {
-			if(!$(e.target).is('#threebar') && !$(e.target).is('.bar')) {
-				$( ".mobilenav" ).hide();
-			}
-		});
-	</script>
 </header>

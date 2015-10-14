@@ -3,17 +3,12 @@
 
 /*
 
-
-
-General Styling Area
-
-
+Begin General Styling
 
 */
 
 html{
 	background-color: #EEEEEE;
-	/* Light Gray */
 }
 body{
 	width: 100%;
@@ -97,21 +92,11 @@ p {
 
 /*
 
-
-
-End General Styling Area
-
-
-
-*/
-
-/*
+End General Styling
 
 
 
-Navigation Styling Area 
-
-
+Begin Navigation Styling
 
 */
 
@@ -146,13 +131,12 @@ nav a p{
     height: 45px;
     margin: auto;
 }
-nav a:link {color:#FFFFFF;}      /* unvisited link */
-nav a:visited {color:#FFFFFF;}  /* visited link */
-nav a:hover {color:#FFFFFF;}  /* mouse over link */
-nav a:active {color:#FFFFFF;}  /* selected link */
+nav a:link {color:#FFFFFF;}
+nav a:visited {color:#FFFFFF;}
+nav a:hover {color:#FFFFFF;}
+nav a:active {color:#FFFFFF;}
 
 
-/* Left align logo in navigation */
 #logo
 {
 	background-image: url('../img/logos/header/navLogoDesktop.jpg');
@@ -247,22 +231,10 @@ nav a:active {color:#FFFFFF;}  /* selected link */
 
 /*
 
+End Navigation Styling
 
 
-End Navigation Styling Area 
-
-
-
-*/
-
-
-/* 
-
-
-
-Hero Styling Area 
-
-
+Begin Hero Section Styling
 
 */
 #hero
@@ -271,28 +243,16 @@ Hero Styling Area
 	margin-top: 100px;
 }
 
-/*Fixes height of parent div problem*/
 #hero:after { 
 	content: " "; display: block; clear: both;
 }
 
 /* 
 
+End Hero Section Styling
 
 
-End Hero Styling Area 
-
-
-
-*/
-
-/* 
-
-
-
-Resume Styling Area 
-
-
+Begin Resume Section Styling
 
 */
 
@@ -369,22 +329,10 @@ Resume Styling Area
 
 /* 
 
+End Resume Section Styling Area 
 
 
-End Resume Styling Area 
-
-
-
-*/
-
-/*
-
-
-
-Skill Section Styling
-
-
-
+Begin Skill Section Styling
 
 */
 
@@ -405,21 +353,10 @@ Skill Section Styling
 
 /*
 
-
-
 End Skill Section Styling
 
 
-
-*/
-
-/* 
-
-
-
-Contact Styling 
-
-
+Begin Contact Section Styling 
 
 */
 #contactStyle {
@@ -472,21 +409,10 @@ input[type="submit"] {
 
 /* 
 
+End Contact Section Styling 
 
 
-End Contact Styling 
-
-
-
-*/
-
-/* 
-
-
-
-Footer Styling 
-
-
+Begin Footer Section Styling 
 
 */
 footer{
@@ -512,21 +438,10 @@ footer img{
 
 /* 
 
+End Footer Section Styling 
 
 
-End Footer Styling 
-
-
-
-*/
-
-/* 
-
-
-
-Carousel Styling 
-
-
+Begin Carousel Styling 
 
 */
 #carousel {
@@ -568,7 +483,7 @@ Carousel Styling
 .slide4{
 	background-image: url("../img/carousel/slide4-large.jpg");
 }
-/* Styling for prev and next buttons */
+
 #arrow-left-container, #arrow-right-container {
 	height: 450px;
 	display: inline-block;
@@ -687,13 +602,8 @@ Carousel Styling
 		background-image: url("../img/carousel/slide4-xtrasmall.jpg");
 	}	
 }
-
 /* 
 
-
-
-End Carousel Styling 
-
-
+End Carousel Styling
 
 */

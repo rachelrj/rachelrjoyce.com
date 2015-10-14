@@ -1,7 +1,16 @@
 /*Rachel Joyce's Personal Website Cascading Style Sheet*/
 
 
-/*General Styling Area*/
+/*
+
+
+
+General Styling Area
+
+
+
+*/
+
 html{
 	background-color: #EEEEEE;
 	/* Light Gray */
@@ -29,20 +38,34 @@ h1 {
 	margin-bottom: 0;
 	padding-top: 20px;
 }
-.SectionHeaderLeft, .SectionHeaderRight{
-	color: #fff;
-	margin-left:-10%;
-	width: 90%;
-	margin-top: 0;
-	margin-bottom: 0;
-	padding-top: 20px;
-	display: inline-block;
-	float: left;
+.Section {
+	padding-bottom: 50px;
+	display: block;
 }
-@media screen and (max-width: 900px) {
-	.SectionHeaderLeft, .SectionHeaderRight{
-		margin-left:0;
-	}	
+.leftContainer {
+	width: 35%;
+	margin-left: 10%;
+	margin-right: 5%;
+	float:	left;
+}
+.rightContainer {
+	width: 35%;
+	margin-right: 10%;
+	margin-left: 5%;
+	float:	right;	
+}
+.container {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+@media screen and (max-width: 900px){
+	.leftContainer, .rightContainer{
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+		text-align: left;
+	}
 }
 
 h2, h3, h4, ol, ul, li {
@@ -62,22 +85,36 @@ h4 {
 p {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 1em;
-	margin-left: 12.5%;
-	margin-right: 12.5%;
-}
-footer{
-	display: block;
-	width: 100%;
-	background-color: #000000;
-	color: white;
-	padding-top: 35px;
-	padding-bottom: 35px;
-}
-footer:after { 
-	content: " "; display: block; clear: both;
+	margin: 0;
 }
 
-/*Navigation Styling Area */
+.anchor{
+  display: block;
+  height: 96px; /*same height as header*/
+  margin-top: -96px; /*same height as header*/
+  visibility: hidden;
+}
+
+/*
+
+
+
+End General Styling Area
+
+
+
+*/
+
+/*
+
+
+
+Navigation Styling Area 
+
+
+
+*/
+
 nav {
 	text-align: center;
 	font-size: 3em;
@@ -94,14 +131,20 @@ nav a{
 	text-decoration: none;
 	display: inline-block;
 	width: 20%;
-	height: 100%;
     text-align: center;
     vertical-align: middle;
 	border-radius: 1em;
+    height: 96px;
+    position: relative;
 }
 nav a p{
-	height: 50%;
-	vertical-align: middle;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 45px;
+    margin: auto;
 }
 nav a:link {color:#FFFFFF;}      /* unvisited link */
 nav a:visited {color:#FFFFFF;}  /* visited link */
@@ -201,14 +244,30 @@ nav a:active {color:#FFFFFF;}  /* selected link */
 .mobilenav a:visited {color:#FFFFFF;}  /* visited link */
 .mobilenav a:hover {color:#FFFFFF;}  /* mouse over link */
 .mobilenav a:active {color:#FFFFFF;}  /* selected link */
-/*End Navigation Styling Area*/
+
+/*
 
 
-/* Hero Styling Area */
+
+End Navigation Styling Area 
+
+
+
+*/
+
+
+/* 
+
+
+
+Hero Styling Area 
+
+
+
+*/
 #hero
 {
 	background-color: #ffffff;
-	/* Clear the sticky navigation */
 	margin-top: 100px;
 }
 
@@ -217,85 +276,29 @@ nav a:active {color:#FFFFFF;}  /* selected link */
 	content: " "; display: block; clear: both;
 }
 
-.floatleft {
-	float: left;
-	width: 40%;
-	margin-right: 2%;
-	margin-left: 3%;
-	text-align: center;
-}
+/* 
 
-.floatright {
-	float: right;
-	margin-left: 2%;
-	margin-right: 3%;
-	width: 40%;
-	text-align: center;
-}
 
-#welcometomysitetext {
-	color: black;
-}
 
-/* Float welcome text on top of hero image at smaller screensizes*/
-@media screen and (max-width: 620px) {
-	.floatleft{
-		width: 100%;
-		position: relative;
-		z-index: 1;
-		top: 0;
-		left: 0;
-		margin-right: 2%;
-	}
-	.floatright{
-		width: 45%;
-		margin-left: 27.5%;
-		margin-right: 27.5%;
-		position: absolute;
-		z-index: 2;
-	}
-	#welcometomysitetext{
-		color:	white;
-		font-size: 2.5em;
-	}
-}
-@media screen and (max-width: 547px) {
-	.floatright{
-		width: 55%;
-		margin-left: 22.5%;
-		margin-right: 22.5%;
-	}
+End Hero Styling Area 
 
-}
-@media screen and (max-width: 436px) {
-	.floatright{
-		width: 70%;
-		margin-left: 15%;
-		margin-right: 15%;
-	}
-	#hero img{
-		max-width: 280px;
-		margin:	5px; 
-	}
-	.floatleft {
-		margin-right: .5%;
-		margin-left: .5%;
-	}
-}
-/*End Hero Styling Area */
 
-/*About Styling */
-#aboutStyle {
-	padding-bottom: 50px;
-}
-/*End About Styling*/
 
-/* Resume Styling Area */
+*/
+
+/* 
+
+
+
+Resume Styling Area 
+
+
+
+*/
 
 #resumeStyle {
 	background-color: #1F1F1F;
 	font: white;
-	padding-bottom: 50px;
 }
 #resumeStyle * {
 	color: white;
@@ -314,38 +317,16 @@ nav a:active {color:#FFFFFF;}  /* selected link */
 #resumeStyle h2 {
 	margin-bottom: 15px;
 }
-#resumeStyle p {
-	font-size: 1em;
-	margin-left: 0;
-	margin-right: 0;
-}
 
 #resumeStyle hr{
 	height: 1px;
 	border-width: 1px;
 }
 
-/*Fixes height of parent div problem*/
 #resumeStyle:after { 
 	content: " "; display: block; clear: both;
 }
 
-/*Employment History Styling Area */
-
-
-#employment, #form {
-	width: 35%;
-	margin-left: 15%;
-	margin-right: 5%;
-	float:	left;
-}
-@media screen and (max-width: 900px){
-	#employment, #form{
-		width: 80%;
-		margin-left: 10%;
-		margin-right: 10%;
-	}
-}
 .thinfont {
 	font-weight: 200;
 }
@@ -356,7 +337,7 @@ nav a:active {color:#FFFFFF;}  /* selected link */
 	content: " "; display: block; clear: both;
 }
 
-.image {
+.jobImage {
 	float: left;
 	display: inline;
 	text-align: left;
@@ -364,7 +345,7 @@ nav a:active {color:#FFFFFF;}  /* selected link */
 	margin-left: 3%;
 	padding-top: 7px;
 }
-.text {
+.jobText {
 	float: right;
 	display: inline;
 	width: 65%;
@@ -378,51 +359,77 @@ nav a:active {color:#FFFFFF;}  /* selected link */
 #downloadbutton a:visited, #ctabutton a:visited {text-decoration: none; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; color:white; background-color: steelblue; font-size: 1.2em; padding: 5px;}  /* visited link */
 #downloadbutton a:hover, #ctabutton a:hover {text-decoration: none; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; color:steelblue; background-color: white; font-size: 1.2em; padding: 5px;}  /* mouse over link */
 #downloadbutton a:active, #ctabutton a:active {text-decoration: none; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; color:steelblue; background-color: white; font-size: 1.2em; padding: 5px;}  /* selected link */
-/*End Employment History Styling */
-/*Eduation and Skills Styling Area*/
-#ed-skills, #skills {
-	width: 30%;
-	margin-right: 10%;
-	margin-left: 5%;
-	float:	left;
-}
-@media screen and (max-width: 900px){
-	#ed-skills, #skills{
-		width: 80%;
-		margin-left: 10%;
-		margin-right: 10%;
-	}
-}
-#education{
+
+#educationStyle{
 	margin-bottom: 30px;
 }
-#ed-skills img, #skills img, #skills a{
+#educationStyle img, #skillsSection img, #skillsSection a {
 	max-width: 100%;
 }
-#skills img {
+
+/* 
+
+
+
+End Resume Styling Area 
+
+
+
+*/
+
+/*
+
+
+
+Skill Section Styling
+
+
+
+
+*/
+
+#skillsSection *{
+	color: white;
+}
+
+#skillsSection img {
 	border: solid black 1px;
 	margin-top: 5px;
 }
-.skillSection {
-	width:100%;
-}
-/*End Skills Styling Area*/
-/*End Resume Styling*/
-
-/* Contact Styling */
-#contactStyle {
-	display: block;
-	width: 100%;
-	padding-bottom: 50px;
+#skillsSection {
 	background-color: #333333;
+}
+#skillsSection:after { 
+	content: " "; display: block; clear: both;
+}
+
+/*
+
+
+
+End Skill Section Styling
+
+
+
+*/
+
+/* 
+
+
+
+Contact Styling 
+
+
+
+*/
+#contactStyle {
+	background-color: #D3D3D3;
 }
 #contactStyle:after { 
 	content: " "; display: block; clear: both;
 }
 
 form p {
-	margin-left: 0;
-	color: steelblue;
 	font-weight: bold;
 }
 
@@ -431,15 +438,20 @@ input[type="text"] {
     height: 25px;
     display: block;
     margin-left: 0;
-    margin-right: 15%;
+    margin-right: 0;
 }
 input[name="message"] {
 	height: 150px;
 	width: 350px;
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 400px){
 	input[name="message"]{
-		width: 200px;
+		width: 280px;
+	}
+}
+@media screen and (max-width: 340px){
+	input[name="message"]{
+		width: 240px;
 	}
 }
 
@@ -458,51 +470,65 @@ input[type="submit"] {
 	padding: 5px;
 }
 
-/*End Contact Styling*/
-footer .floatright {
-	text-align: left;
-	width: 35%;
-	margin-right: 10%;
-	margin-left: 5%;
+/* 
+
+
+
+End Contact Styling 
+
+
+
+*/
+
+/* 
+
+
+
+Footer Styling 
+
+
+
+*/
+footer{
+	display: block;
+	width: 100%;
+	background-color: #000000;
+	color: white;
+	padding-top: 35px;
+	padding-bottom: 35px;
 }
-footer .floatleft {
-	text-align: left;
-	width: 35%;
-	margin-right: 5%;
-	margin-left:10%;
-}
-footer p {
-	margin: 0;
+footer:after { 
+	content: " "; display: block; clear: both;
 }
 @media screen and (max-width: 600px) {
-	footer .floatright{
-		width: 90%;
-		margin-left: 5%;
-		margin-right: 5%;
-		float:	none;
-		display: block;
-
-	}
-
-	footer .floatleft {
-		width: 90%;
-		margin-left: 5%;
-		margin-right: 5%;
-		float: none;
-		display: block;
-	}
-
 	footer {
-		height: 220px;
+		height: 160px;
 	}
 }
-footer .floatleft img{
+footer img{
 	margin-left: 10px;
 	margin-top: 5px;
 }
 
+/* 
 
-/*Carousel*/
+
+
+End Footer Styling 
+
+
+
+*/
+
+/* 
+
+
+
+Carousel Styling 
+
+
+
+*/
 #carousel {
 	width: 100%;
 	border:1px solid #ccc;
@@ -546,6 +572,7 @@ footer .floatleft img{
 #arrow-left-container, #arrow-right-container {
 	height: 450px;
 	display: inline-block;
+	cursor: pointer;
 }
 #arrow-right-container {
 	float: right;
@@ -660,9 +687,13 @@ footer .floatleft img{
 		background-image: url("../img/carousel/slide4-xtrasmall.jpg");
 	}	
 }
-.anchor{
-  display: block;
-  height: 96px; /*same height as header*/
-  margin-top: -96px; /*same height as header*/
-  visibility: hidden;
-}
+
+/* 
+
+
+
+End Carousel Styling 
+
+
+
+*/

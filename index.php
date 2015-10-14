@@ -55,8 +55,9 @@
 		</div>
 	</div>
 	<div id="about" class="anchor"></div>
-	<div id= "aboutStyle">
+	<div class= "Section" id="aboutStyle">
 		<h1 class="SectionHeader">About</h1>
+		<div class="container">
 		<p>
 			Thank you for visiting my personal site and for taking a few minutes to get to know me. 
 		</p>
@@ -72,18 +73,18 @@
 			I am always looking to discuss common interests or opportunities. Fill out the form below to send me an email
 			so that we can connect. Thanks again for visiting.
 		</p>
-
+		</div>
 	</div>
 	<div id="resume" class="anchor"></div>
-	<div id= "resumeStyle">
+	<div class="Section" id= "resumeStyle">
 	<h1 class="SectionHeader"> Resume </h1>
-		<div id= "employment">
+		<div class="leftContainer">
 			<h2> Employment History </h2>
 				<div class="job">
-					<div class="image">
+					<div class="jobImage">
 						<img src = "img/logos/job/yesenergy.png">
 					</div>
-					<div class = "text">
+					<div class = "jobText">
     					<h3 class="thinfont"> Web Developer, Yes Energy </h3>
 						<h4 class="thinfont"> May, 2015 - Present </h4>
 						<a href="http://www.yesenergy.com/" target="_blank">Yes Energy Website</a>
@@ -94,30 +95,30 @@
 				</div>
 				<hr>
 				<div class="job">
-					<div class="image">
+					<div class="jobImage">
 						<img src = "img/logos/job/channelnet-logo.png">
 					</div>
-					<div class = "text">
+					<div class = "jobText">
     					<h3 class="thinfont"> Project Manager, ChannelNet </h3>
 						<h4 class="thinfont"> May, 2014 - May, 2015 </h4>
 						<a href="http://www.channelnet.com/" target="_blank">ChannelNet Website</a>
 					</div>
 				</div>
 				<div class="job">
-					<div class="image">
+					<div class="jobImage">
 						
 					</div>
-					<div class = "text">
+					<div class = "jobText">
     					<h3 class="thinfont"> Digital Analyst, ChannelNet </h3>
 						<h4 class="thinfont"> May, 2013 - May, 2014 </h4>
 					</div>
 				</div>
 				<hr>
 				<div class="job">
-					<div class="image">
+					<div class="jobImage">
 						<img src = "img/logos/job/conor-oneills.png">
 					</div>
-					<div class = "text">
+					<div class = "jobText">
     					<h3 class="thinfont"> Server, Conor O'Neill's </h3>
 						<h4 class="thinfont"> August, 2010 - August, 2013 </h4>
 						<a href="http://www.conoroneills.com/" target="_blank">Conor O'Neill's Website</a>
@@ -125,10 +126,10 @@
 				</div>
 				<hr>
 				<div class="job">
-					<div class="image">
+					<div class="jobImage">
 						<img src = "img/logos/job/lifetime-fitness.png">
 					</div>
-					<div class = "text">
+					<div class = "jobText">
     					<h3 class="thinfont"> Swim Instructor, Life Time </h3>
 						<h4 class="thinfont"> January, 2010 - August, 2010 </h4>
 						<a href="https://www.lifetimefitness.com/en.html" target="_blank">Life Time Fitness's Website</a>
@@ -139,26 +140,36 @@
 				<a href="pdf/RachelJoyce-resume.pdf" download="RachelsResume">Download My Resume</a>
 				</div>
 		</div>
-		<div id ="ed-skills">
-			<div id="education">
-				<h2>Education</h2>
-					<img src="img/cu.png">
-					<h3 class="thinfont">University of Colorado, Boulder</h3>
-					<h4 class="thinfont">Master of Business Administration</h4>
-					<h4 class="thinfont">Expected Graduation: 2017</h4>
-					<hr>
-					<img src="img/universityofmichigan.png">
-					<h3 class="thinfont">University of Michigan, Ann Arbor</h3>
-					<h4 class="thinfont">Bachelor of Arts in Informatics</h4>
-					<h4 class="thinfont">Minor: Computer Science</h4>
+		<div class="rightContainer" id="educationStyle">
+			<h2>Education</h2>
+				<img src="img/cu.png">
+				<h3 class="thinfont">University of Colorado, Boulder</h3>
+				<h4 class="thinfont">Master of Business Administration</h4>
+				<h4 class="thinfont">Expected Graduation: 2017</h4>
+				<hr>
+				<img src="img/universityofmichigan.png">
+				<h3 class="thinfont">University of Michigan, Ann Arbor</h3>
+				<h4 class="thinfont">Bachelor of Arts in Informatics</h4>
+				<h4 class="thinfont">Minor: Computer Science</h4>
+		</div>
+	</div>
+	<div id="skills" class="anchor"> </div>
+	<div class="Section" id= "skillsSection">	
+		<h1 class="SectionHeader"> Skills </h1>
+		<div class="leftContainer">
+			<img src="img/WebDevelopment-transparent.png">
+		</div>
+		<div class="rightContainer">
+			<a href="Forecast-Lookup"><img src="img/ReactJS.jpg"></a>
+			<div id="ctabutton">
+				<a href="Forecast-Lookup" target="_blank">View my React mini-project</a>
 			</div>
 		</div>
 	</div>
 	<div id="contact" class="anchor"></div>
-	<div id= "contactStyle">
-		<div id="form">
-			<h1 class="SectionHeaderLeft"> Contact </h1>
-			<div id="formDiv">
+	<div class="Section" id= "contactStyle">
+		<h1 class="SectionHeader"> Contact </h1>
+			<div class="container">
 				<form method="post" action="form.php">
 					<p>Name:</p><input type="text" name="name">
 					<p>E-mail:</p> <input type="text" name="email">
@@ -167,22 +178,9 @@
 					<input type="submit" value="Send">
 				</form>
 			</div>
-		</div>
-		<div id="skills">
-			<h1 class="SectionHeaderRight"> Skills </h1>
-			<div class="skillSection">
-			<img src="img/WebDevelopment-transparent.png">
-			</div>
-			<div class="skillSection">
-			<a href="Forecast-Lookup"><img src="img/ReactJS.jpg"></a>
-			<div id="ctabutton">
-				<a href="Forecast-Lookup" target="_blank">View my React mini-project</a>
-			</div>
-			</div>
-		</div>
 	</div>
 <footer>
-	<div class="floatleft">
+	<div class="leftContainer">
 		<h3>
 			Connect
 		</h3>
@@ -196,13 +194,12 @@
 			<img src="img/icons/64-twitter.png">
 		</a>
 	</div>
-	<div class="floatright">
+	<div class="rightContainer">
 		<h3>
 			Last Modified
 		</h3>
 		<p>
 			<?php
-				// outputs e.g. 'Last modified: March 04 1998 20:43:59.'
 				echo "Last modified: " . date ("F d Y H:i:s.", getlastmod());
 			?>
 		</p>

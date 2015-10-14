@@ -29,7 +29,6 @@ function addToggleEventForThreeBar(){
 };
 
 function hideMobileNavigationOnWindowResize(){
-	console.log("hideMobileNavigationOnWindowResize");
 	$( window ).resize(function() {
 		$( ".mobilenav" ).hide();
 	});	

@@ -366,7 +366,7 @@ Begin Contact Section Styling
 	content: " "; display: block; clear: both;
 }
 
-form p {
+#contactForm p {
 	font-weight: bold;
 }
 
@@ -392,6 +392,9 @@ input[name="message"] {
 	}
 }
 
+#contactForm input {
+	border: none;
+}
 
 /*Very similar to downloadbutton*/
 input[type="submit"] {

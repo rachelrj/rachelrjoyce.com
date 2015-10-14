@@ -2,17 +2,22 @@
 // define variables and set to empty values
 $name = $email = $website = $message = "";
 
-$name = $_POST["name"];
-$email = $_POST["email"];
-$website = $_POST["website"];
-$message = $_POST["message"];
+$name      = filter_var($_POST["name"], FILTER_SANITIZE_STRING);
+$email     = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+$website   = filter_var($_POST["website"], FILTER_SANITIZE_STRING);
+$message   = filter_var($_POST["message"], FILTER_SANITIZE_STRING);
 
 $body = $name . " wrote " . $message . ". Reply to " . $email;
 $to = "rachelrj@umich.edu";
 $subj = "Message from Personal Website";
 
 $headers = "From: mywebsite@rachelrjoyce.com";
-mail($to,$subj,$body,$headers);
+$sendMail = mail($to,$subj,$body,$headers);
 
-header('Location:index.php#contact');
+if(!$sendMail) {
+    exit('error');
+}
+else {
+    exit('success');
+}
 ?>

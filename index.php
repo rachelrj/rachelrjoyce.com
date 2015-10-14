@@ -20,11 +20,14 @@
 <!-- Include Touchy JS minified file for swipe event manipulation -->
 <script src="js/touchy.js"></script>
 
-<!-- Include MY JQuery Carousel -->
+<!-- Include MY JQuery Carousel Functions -->
 <script src="js/carousel.js"></script>
 
-<!-- Include MY Scroll Function -->
+<!-- Include MY Navigation Functions -->
 <script src="js/navigationFunctions.js"></script>
+
+<!-- Include MY Form Functions -->
+<script src="js/form.js"></script>
 
 <!-- Include MY Stylesheet -->
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
@@ -169,14 +172,14 @@
 	<div id="contact" class="anchor"></div>
 	<div class="Section" id= "contactStyle">
 		<h1 class="SectionHeader"> Contact </h1>
-			<div class="container">
-				<form method="post" action="form.php">
-					<p>Name:</p><input type="text" name="name">
+			<div id="contactSection" class="container">
+				<div id="contactForm">
+					<p>Name:</p><input type="text" required="true" name="name">
 					<p>E-mail:</p> <input type="text" name="email">
 					<p>Website:</p> <input type="text" name="website">
-					<p>Message:</p> <input type="text" name="message">
-					<input type="submit" value="Send">
-				</form>
+					<p>Message:</p> <input type="text" required="true" name="message">
+					<input id="submit" type="submit" value="Send">
+				</div>
 			</div>
 	</div>
 <footer>

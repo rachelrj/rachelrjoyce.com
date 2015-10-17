@@ -3,6 +3,7 @@ $(document).ready(addScrollAnimationForLogos);
 $(document).ready(addToggleEventForThreeBar);
 $(document).ready(hideMobileNavigationOnWindowResize);
 $(document).ready(hideMobileNavigationIfUserClicksOutside);
+$(document).ready(addPrettyBorders);
 
 function addScrollAnimationForAnchors(){
 	$('.navigationLink').click(function(event){
@@ -24,6 +25,7 @@ function addScrollAnimationForLogos(){
 
 function addToggleEventForThreeBar(){
 	$('#threebar').click(function(event){
+		$('#threebar').toggleClass( "active" );
 		$('.mobilenav').slideToggle("slow");   
 	});	
 };
@@ -36,10 +38,18 @@ function hideMobileNavigationOnWindowResize(){
 
 function hideMobileNavigationIfUserClicksOutside() {
 	$(document).bind('click', function(e) {
-		if(e.target.id !== "threebar" && e.target.className !== "bar") {
+		if(e.target.id !== "threebar" && e.target.id !== "bars") {
 			if( $(".mobilenav").css('display') !== "none"){
 				$('.mobilenav').slideToggle("slow");
 			}
 		}
+	});
+};
+
+function addPrettyBorders() {
+	var navItems = $('.mobilenav').children('a').each(function(i) {
+		var transparency = 0.8 - (0.2 * i);
+		var borderCSS = "1px solid rgba(97, 51, 47, " + transparency.toString() + ")";
+		$(this).css({"border-top": borderCSS});
 	});
 };
